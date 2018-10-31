@@ -10,6 +10,10 @@ import keras.backend as K
 import h5py
 
 import tensorflow as tf
+
+# No OpKernel was registered to support Op 'CudnnRNN' with these attrs.  Registered devices: [CPU], Registered kernels
+from tensorflow.contrib.rnn import *
+
 from keras.backend.tensorflow_backend import set_session
 config = tf.ConfigProto()
 config.gpu_options.per_process_gpu_memory_fraction = 0.2
